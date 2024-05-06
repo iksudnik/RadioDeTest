@@ -20,7 +20,7 @@ struct Episode: Decodable {
 	let duration: TimeInterval
 	let parentLogo300x300: String
 	let url: String
-	let isDownloaded: Bool?
+	let isDownloaded: Bool
 }
 
 extension Episode {
@@ -41,7 +41,7 @@ extension Episode {
 							parentLogo300x300: "https://static.prod.radio-api.net/verbrechen/8f35e0356a01933141699e5f871e3707/logo_300x300.png",
 							url: "https://zeitonline.simplecastaudio.com/b108e21b-c741-4c2d-bebc-7c4ff91d6b14/episodes/1387d0a5-653b-41a0-9e9a-35711387ca1b/audio/128/default.mp3/default.mp3_ywr3ahjkcgo_44801d18af6a3ae474cc343359c3daf4_43150323.mp3?aid=rss_feed%5Cu0026awCollectionId=b108e21b-c741-4c2d-bebc-7c4ff91d6b14%5Cu0026awEpisodeId=1387d0a5-653b-41a0-9e9a-35711387ca1b%5Cu0026feed=dnJhzmyN&hash_redirect=1&x-total-bytes=43150323&x-ais-classified=streaming&listeningSessionID=0CD_382_54__bc23f903c610a2bcdeae1e681bbc2c3cfd534829",
 							isDownloaded: false)
-
+	
 	static let mock2 = Self(id: "verbrechen_die-ratte-hat-sich-noch-gewehrt_3a3229745e",
 							title: "\"Die Ratte hat sich noch gewehrt\"",
 							description: "Sandra liebt alles, was lebt – und doch bringt sie zwei Männer dazu, mit\nihr zusammen einen blutigen Mord zu begehen. Die beiden kennen das Opfer\nnicht einmal. Ein dritter Helfer lässt die Leiche verschwinden. Auch er\nhat nichts gegen den Toten. Was geht da vor sich?\n\nIn der Folge 149 sprechen Daniel Müller, Chefredakteur des\nKriminalmagazins ZEIT-Verbrechen, und Anne Kunze, Kriminalreporterin der\nZEIT, über einen Mord und unvorstellbare menschliche Abhängigkeiten.\n\nDie neue Ausgabe des Kriminalmagazins \"ZEIT Verbrechen\" liegt am Kiosk\nund ist hier online bestellbar. Sie möchten zwei Ausgaben zum\nKennenlernpreis testen? Dann klicken Sie hier.\n\nDer Text zur Folge (\"Kaltblütig\" von Daniel Müller) ist im Januar 2016\nin der ZEIT erschienen.\n\n[ANZEIGE] Mehr über die Angebote unserer Werbepartnerinnen und -partner\nfinden Sie HIER\n\n[ANZEIGE] Falls Sie uns nicht nur hören, sondern auch lesen möchten,\ntesten Sie jetzt 4 Wochen kostenlos Die ZEIT. Hier geht's zum Angebot.\n",

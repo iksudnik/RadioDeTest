@@ -16,9 +16,8 @@ extension EpisodeEntity {
 		duration = episode.duration
 		logoLink = episode.parentLogo300x300
 		remoteUrl = episode.url
-		isDownloaded = episode.isDownloaded ?? false
 	}
-
+	
 	func toEpisode() -> Episode {
 		return .init(id: id!,
 					 title: title!,
@@ -27,6 +26,6 @@ extension EpisodeEntity {
 					 duration: duration,
 					 parentLogo300x300: logoLink!,
 					 url: remoteUrl!,
-					 isDownloaded: isDownloaded)
+					 isDownloaded: audioData != nil)
 	}
 }

@@ -29,6 +29,7 @@ final class MainCoordinator: Coordinator {
 	
 	func start() {
 		let viewModel = EpisodesListViewModel(repository: appContext.repository,
+											  databaseClient: appContext.databaseClient,
 											  downloadManager: appContext.downloadManager)
 		viewModel.$selectedModel
 			.compactMap { $0 }
@@ -36,18 +37,23 @@ final class MainCoordinator: Coordinator {
 			.sink { [weak self] model in
 				self?.openPlayer(for: model)
 			}.store(in: &cancellables)
-
-		let viewController = EpisodesListViewController(viewModel: viewModel)
+		
+		let viewController: EpisodesListViewController = .fromStoryboard()
+		viewController.setViewModel(viewModel)
 		navigationController.setViewControllers([viewController], animated: false)
 	}
-
+	
 	func openPlayer(for model: EpisodeViewModel) {
-		guard case let .downloaded(fileUrl) = model.downloadState else {
+		guard case .downloaded = model.downloadState,
+			  let audioData = appContext.databaseClient.audioData(model.id) else {
 			return
 		}
-		let viewModel = PlayerViewModel(fileUrl: fileUrl, imageUrl: model.logoUrl, title: model.title)
-		let viewController = PlayerViewController(viewModel: viewModel)
+		let viewModel = PlayerViewModel(audioData: audioData, imageUrl: model.logoUrl, title: model.title)
+		
+		let viewController: PlayerViewController = .fromStoryboard()
+		viewController.setViewModel(viewModel)
 		navigationController.pushViewController(viewController, animated: true)
+		
 	}
 }
 

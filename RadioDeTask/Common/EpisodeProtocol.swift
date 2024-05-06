@@ -7,17 +7,8 @@
 
 import Foundation
 
-protocol EpisodeProtocol {
+protocol EpisodeProtocol: Identifiable {
 	var id: String { get }
-}
-
-extension EpisodeProtocol {
-	var fileUrl: URL {
-		return  URL.documentsDirectory
-			.appending(path: "Podcasts")
-			.appending(path: id)
-			.appendingPathExtension("mp3")
-	}
 }
 
 extension Episode: EpisodeProtocol {}

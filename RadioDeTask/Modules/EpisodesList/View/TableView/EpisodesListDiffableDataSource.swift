@@ -10,7 +10,7 @@ import UIKit
 typealias EpisodesListDiffableDataSource = UITableViewDiffableDataSource<Section, EpisodeViewModel>
 
 class EpisodesListDataSource: EpisodesListDiffableDataSource {
-
+	
 	init(tableView: UITableView) {
 		super.init(tableView: tableView) { tableView, indexPath, item in
 			let cell = tableView.dequeueReusableCell(withIdentifier: EpisodeCell.identifier, for: indexPath) as! EpisodeCell

@@ -8,9 +8,13 @@
 import UIKit
 
 final class ImagePlaceholderView: UIView {
-	private let activityIndicator = UIActivityIndicatorView.new {
-		$0.color = .white
-	}
+	private lazy var activityIndicator: UIActivityIndicatorView = {
+		let indicator = UIActivityIndicatorView()
+		indicator.color = .white
+		indicator.translatesAutoresizingMaskIntoConstraints = false
+		return indicator
+	}()
+	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		backgroundColor = .systemGray
@@ -18,10 +22,10 @@ final class ImagePlaceholderView: UIView {
 		
 		addSubview(activityIndicator)
 		
-		NSLayoutConstraint.activate {
-			activityIndicator.centerXAnchor.constraint(equalTo: centerXAnchor)
+		NSLayoutConstraint.activate([
+			activityIndicator.centerXAnchor.constraint(equalTo: centerXAnchor),
 			activityIndicator.centerYAnchor.constraint(equalTo: centerYAnchor)
-		}
+		])
 		
 		activityIndicator.startAnimating()
 	}

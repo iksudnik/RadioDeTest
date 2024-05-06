@@ -12,34 +12,34 @@ import AVFoundation
 /// Just to test that everything is downloaded
 
 final class PlayerViewModel {
-
-	let fileUrl: URL
+	
+	let audioData: Data
 	let imageUrl: URL?
 	let title: String
-
+	
 	private var player: AVAudioPlayer?
 	@Published var isPlaying = false
-
-	init(fileUrl: URL, imageUrl: URL?, title: String) {
-		self.fileUrl = fileUrl
+	
+	init(audioData: Data, imageUrl: URL?, title: String) {
+		self.audioData = audioData
 		self.imageUrl = imageUrl
 		self.title = title
-
+		
 		loadAudioFile()
 	}
-
+	
 	private func loadAudioFile() {
 		do {
-			player = try AVAudioPlayer(contentsOf: fileUrl)
+			player = try AVAudioPlayer(data: audioData)
 			player?.prepareToPlay()
 		} catch {
 			print("Failed to load: \(error)")
 		}
 	}
-
+	
 	func togglePlayPause() {
 		guard let player = player else { return }
-
+		
 		if isPlaying {
 			player.pause()
 			isPlaying.toggle()
@@ -54,7 +54,7 @@ final class PlayerViewModel {
 			}
 		}
 	}
-
+	
 	func cleanUp() {
 		if let player = player, player.isPlaying {
 			player.stop()

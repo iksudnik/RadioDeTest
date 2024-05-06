@@ -13,22 +13,25 @@ import UIKit
 extension UIImageView {
 	func loadImage(from url: URL?,
 				   placeholder: @MainActor () -> (UIView)) async {
-
+		
 		let subview = placeholder()
-
+		
 		await MainActor.run {
-			addSubviews(subview)
-			NSLayoutConstraint.activate {
-				subview.getConstraintsToEdges(of: self)
-			}
+			addSubview(subview)
+			NSLayoutConstraint.activate([
+				subview.topAnchor.constraint(equalTo: topAnchor),
+				subview.leadingAnchor.constraint(equalTo: leadingAnchor),
+				subview.trailingAnchor.constraint(equalTo: trailingAnchor),
+				subview.bottomAnchor.constraint(equalTo: bottomAnchor)
+			])
 		}
-
+		
 		guard let url else { return }
-
+		
 		do {
 			let (data, _) = try await URLSession.shared.data(from: url)
 			let serverImage = UIImage(data: data)
-
+			
 			await MainActor.run {
 				subview.removeFromSuperview()
 				image = serverImage

@@ -13,7 +13,7 @@ struct AppContext {
 	let downloadManager = DownloadManager.live
 	
 	let repository: Repository
-
+	
 	init() {
 		repository = Repository.live(database: databaseClient, apiClient: apiClient)
 	}

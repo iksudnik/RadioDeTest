@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E1119F142BE8BE8500755498 /* DownloadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1119F132BE8BE8500755498 /* DownloadView.xib */; };
 		E1414BFD2B8A30620004A398 /* DatabaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1414BFC2B8A30620004A398 /* DatabaseClient.swift */; };
 		E1414BFF2B8A3E0A0004A398 /* EpisodeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1414BFE2B8A3E0A0004A398 /* EpisodeEntity.swift */; };
 		E1414C022B8A42850004A398 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1414C012B8A42850004A398 /* Repository.swift */; };
 		E1414C052B8A488E0004A398 /* DownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1414C042B8A488E0004A398 /* DownloadView.swift */; };
-		E1414C072B8A559E0004A398 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1414C062B8A559E0004A398 /* Download.swift */; };
+		E1414C072B8A559E0004A398 /* DownloadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1414C062B8A559E0004A398 /* DownloadOperation.swift */; };
 		E1414C0A2B8A57B50004A398 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1414C092B8A57B50004A398 /* DownloadManager.swift */; };
+		E170D4F22BE7EF9100DD60E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E170D4F12BE7EF9100DD60E0 /* Main.storyboard */; };
+		E170D4F42BE7F2E000DD60E0 /* UIViewController+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E170D4F32BE7F2E000DD60E0 /* UIViewController+Storyboard.swift */; };
 		E1BC73092B8A144E008291BA /* Formatters+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC73082B8A144E008291BA /* Formatters+Extensions.swift */; };
 		E1BC730B2B8A1A45008291BA /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC730A2B8A1A45008291BA /* AppStrings.swift */; };
 		E1C0E8B72B89FBB800DD3422 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C0E8B62B89FBB800DD3422 /* AppDelegate.swift */; };
@@ -26,10 +29,7 @@
 		E1C0E8D92B89FF6A00DD3422 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C0E8D82B89FF6A00DD3422 /* ApiClient.swift */; };
 		E1C0E8DD2B8A00A300DD3422 /* EpisodesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C0E8DC2B8A00A300DD3422 /* EpisodesResponse.swift */; };
 		E1C0E8E12B8A063C00DD3422 /* ImagePlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C0E8E02B8A063C00DD3422 /* ImagePlaceholderView.swift */; };
-		E1C0E8E32B8A068000DD3422 /* Newable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C0E8E22B8A068000DD3422 /* Newable.swift */; };
 		E1C0E8E52B8A069500DD3422 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C0E8E42B8A069500DD3422 /* Reusable.swift */; };
-		E1C0E8E72B8A073400DD3422 /* ConstraintsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C0E8E62B8A073400DD3422 /* ConstraintsBuilder.swift */; };
-		E1C0E8EA2B8A07B100DD3422 /* UIView+AddSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C0E8E92B8A07B100DD3422 /* UIView+AddSubviews.swift */; };
 		E1C0E8EC2B8A07C900DD3422 /* UIImageView+LoadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C0E8EB2B8A07C900DD3422 /* UIImageView+LoadImage.swift */; };
 		E1C0E8EE2B8A088000DD3422 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C0E8ED2B8A088000DD3422 /* MainCoordinator.swift */; };
 		E1C0E8F22B8A0A2700DD3422 /* EpisodesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C0E8F12B8A0A2700DD3422 /* EpisodesListViewController.swift */; };
@@ -42,12 +42,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E1119F132BE8BE8500755498 /* DownloadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DownloadView.xib; sourceTree = "<group>"; };
 		E1414BFC2B8A30620004A398 /* DatabaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseClient.swift; sourceTree = "<group>"; };
 		E1414BFE2B8A3E0A0004A398 /* EpisodeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeEntity.swift; sourceTree = "<group>"; };
 		E1414C012B8A42850004A398 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		E1414C042B8A488E0004A398 /* DownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadView.swift; sourceTree = "<group>"; };
-		E1414C062B8A559E0004A398 /* Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
+		E1414C062B8A559E0004A398 /* DownloadOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadOperation.swift; sourceTree = "<group>"; };
 		E1414C092B8A57B50004A398 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
+		E170D4F12BE7EF9100DD60E0 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		E170D4F32BE7F2E000DD60E0 /* UIViewController+Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Storyboard.swift"; sourceTree = "<group>"; };
 		E1BC73082B8A144E008291BA /* Formatters+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Formatters+Extensions.swift"; sourceTree = "<group>"; };
 		E1BC730A2B8A1A45008291BA /* AppStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStrings.swift; sourceTree = "<group>"; };
 		E1C0E8B32B89FBB800DD3422 /* RadioDeTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RadioDeTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,10 +66,7 @@
 		E1C0E8D82B89FF6A00DD3422 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		E1C0E8DC2B8A00A300DD3422 /* EpisodesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesResponse.swift; sourceTree = "<group>"; };
 		E1C0E8E02B8A063C00DD3422 /* ImagePlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePlaceholderView.swift; sourceTree = "<group>"; };
-		E1C0E8E22B8A068000DD3422 /* Newable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Newable.swift; sourceTree = "<group>"; };
 		E1C0E8E42B8A069500DD3422 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
-		E1C0E8E62B8A073400DD3422 /* ConstraintsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintsBuilder.swift; sourceTree = "<group>"; };
-		E1C0E8E92B8A07B100DD3422 /* UIView+AddSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AddSubviews.swift"; sourceTree = "<group>"; };
 		E1C0E8EB2B8A07C900DD3422 /* UIImageView+LoadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+LoadImage.swift"; sourceTree = "<group>"; };
 		E1C0E8ED2B8A088000DD3422 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		E1C0E8F12B8A0A2700DD3422 /* EpisodesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesListViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +89,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E1119F0E2BE8B4F200755498 /* DownloadView */ = {
+			isa = PBXGroup;
+			children = (
+				E1414C042B8A488E0004A398 /* DownloadView.swift */,
+				E1119F132BE8BE8500755498 /* DownloadView.xib */,
+			);
+			path = DownloadView;
+			sourceTree = "<group>";
+		};
 		E1414BFB2B8A304B0004A398 /* DatabaseClient */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,7 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				E1C0E8F52B8A0A4700DD3422 /* TableView */,
-				E1414C042B8A488E0004A398 /* DownloadView.swift */,
+				E1119F0E2BE8B4F200755498 /* DownloadView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -119,10 +128,18 @@
 		E1414C082B8A56570004A398 /* DownloadManager */ = {
 			isa = PBXGroup;
 			children = (
-				E1414C062B8A559E0004A398 /* Download.swift */,
+				E1414C062B8A559E0004A398 /* DownloadOperation.swift */,
 				E1414C092B8A57B50004A398 /* DownloadManager.swift */,
 			);
 			path = DownloadManager;
+			sourceTree = "<group>";
+		};
+		E170D4F02BE7EF7000DD60E0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E170D4F12BE7EF9100DD60E0 /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		E1C0E8AA2B89FBB800DD3422 = {
@@ -144,6 +161,7 @@
 		E1C0E8B52B89FBB800DD3422 /* RadioDeTask */ = {
 			isa = PBXGroup;
 			children = (
+				E170D4F02BE7EF7000DD60E0 /* Storyboards */,
 				E1C0E8CD2B89FC7F00DD3422 /* App */,
 				E1C0E8DE2B8A05E800DD3422 /* Common */,
 				E1C0E8CF2B89FE8E00DD3422 /* Coordinators */,
@@ -210,9 +228,7 @@
 			children = (
 				E1C0E8E82B8A079A00DD3422 /* Extensions */,
 				E1C0E8DF2B8A05F300DD3422 /* View */,
-				E1C0E8E22B8A068000DD3422 /* Newable.swift */,
 				E1C0E8E42B8A069500DD3422 /* Reusable.swift */,
-				E1C0E8E62B8A073400DD3422 /* ConstraintsBuilder.swift */,
 				E1E2C79D2B8B7D770013A24F /* EpisodeProtocol.swift */,
 			);
 			path = Common;
@@ -229,9 +245,9 @@
 		E1C0E8E82B8A079A00DD3422 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				E1C0E8E92B8A07B100DD3422 /* UIView+AddSubviews.swift */,
 				E1C0E8EB2B8A07C900DD3422 /* UIImageView+LoadImage.swift */,
 				E1BC73082B8A144E008291BA /* Formatters+Extensions.swift */,
+				E170D4F32BE7F2E000DD60E0 /* UIViewController+Storyboard.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -239,8 +255,8 @@
 		E1C0E8EF2B8A098100DD3422 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				E1E2C7982B8B61E70013A24F /* Player */,
 				E1C0E8F02B8A09FE00DD3422 /* EpisodesList */,
+				E1E2C7982B8B61E70013A24F /* Player */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -339,6 +355,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1119F142BE8BE8500755498 /* DownloadView.xib in Resources */,
+				E170D4F22BE7EF9100DD60E0 /* Main.storyboard in Resources */,
 				E1C0E8C62B89FBBA00DD3422 /* LaunchScreen.storyboard in Resources */,
 				E1C0E8C32B89FBBA00DD3422 /* Assets.xcassets in Resources */,
 			);
@@ -360,21 +378,19 @@
 				E1E2C79A2B8B61FB0013A24F /* PlayerViewController.swift in Sources */,
 				E1414C022B8A42850004A398 /* Repository.swift in Sources */,
 				E1E2C79E2B8B7D770013A24F /* EpisodeProtocol.swift in Sources */,
+				E170D4F42BE7F2E000DD60E0 /* UIViewController+Storyboard.swift in Sources */,
 				E1C0E8DD2B8A00A300DD3422 /* EpisodesResponse.swift in Sources */,
 				E1BC73092B8A144E008291BA /* Formatters+Extensions.swift in Sources */,
 				E1414C052B8A488E0004A398 /* DownloadView.swift in Sources */,
 				E1C0E8F22B8A0A2700DD3422 /* EpisodesListViewController.swift in Sources */,
 				E1C0E8D12B89FEB700DD3422 /* Coordinator.swift in Sources */,
 				E1C0E8D92B89FF6A00DD3422 /* ApiClient.swift in Sources */,
-				E1C0E8E72B8A073400DD3422 /* ConstraintsBuilder.swift in Sources */,
 				E1BC730B2B8A1A45008291BA /* AppStrings.swift in Sources */,
-				E1C0E8EA2B8A07B100DD3422 /* UIView+AddSubviews.swift in Sources */,
 				E1C0E8EE2B8A088000DD3422 /* MainCoordinator.swift in Sources */,
-				E1414C072B8A559E0004A398 /* Download.swift in Sources */,
+				E1414C072B8A559E0004A398 /* DownloadOperation.swift in Sources */,
 				E1C0E8D52B89FF3300DD3422 /* AppContext.swift in Sources */,
 				E1E2C79C2B8B62090013A24F /* PlayerViewModel.swift in Sources */,
 				E1C0E8F72B8A0A6100DD3422 /* EpisodesListDiffableDataSource.swift in Sources */,
-				E1C0E8E32B8A068000DD3422 /* Newable.swift in Sources */,
 				E1414BFD2B8A30620004A398 /* DatabaseClient.swift in Sources */,
 				E1C0E8B92B89FBB800DD3422 /* SceneDelegate.swift in Sources */,
 				E1C0E8D32B89FF0F00DD3422 /* RootCoordinator.swift in Sources */,
